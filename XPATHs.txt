@@ -1,0 +1,12 @@
+//*[@id="content"]/div[2]/div/div/div/div[1]/table/tbody/tr[1]/td
+
+//*[@id="content"]/div[2]/div/div/div/div[1]/table/tbody/tr[2]/td
+
+//*[@id="content"]/div[2]/div/div/div/div[1]/table/tbody/tr[3]/td
+
+//*[@id="content"]/div[2]/div/div/div/div[1]/table/tbody/tr[4]/td
+
+//*[@id="content"]/div[2]/div/div/div/div[2]/table/tbody/tr[1]/td
+
+
+//*[@id="content"]/div[2]/div/div/div
