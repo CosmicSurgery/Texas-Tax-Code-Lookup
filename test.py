@@ -1,4 +1,5 @@
 from time import sleep
+import pandas as pd
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
@@ -23,9 +24,24 @@ input_search = driver.find_element(By.XPATH, '//*[@id="root"]/main/div/div[2]/di
 time.sleep(5)
 
 
-elements = driver.find_elements_by_xpath('//div[@class="table-container"]')
-print(elements)
-sub_elements = driver.find_elements_by_xpath('//div[@class="mt-5"]/div')
+# elements = driver.find_elements_by_xpath('//div[@class="table-container"]')
+# print(elements)
+# sub_elements = driver.find_elements_by_xpath('//div[@class="mt-5"]/div')
 
+# Find all tables containing tax information
+table_elements = driver.find_elements_by_xpath('//div[@class="table-container"]/table')
 
-# driver.quit()
+tax_data = {}
+
+for table in table_elements:
+    rows = table.find_elements_by_tag_name('tr')
+    jurisdiction_name = rows[0].find_element_by_tag_name('td').text
+    tax_info = {rows[i].find_element_by_tag_name('th').text: rows[i].find_element_by_tag_name('td').text for i in range(1, len(rows))}
+
+    tax_data[jurisdiction_name] = tax_info
+
+df = pd.DataFrame(data=tax_data)
+
+print(df.head())
+
+driver.quit()
