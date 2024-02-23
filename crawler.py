@@ -1,4 +1,10 @@
-def crawl(lookup_list):
+import usaddress
+import pandas as pd
+import numpy as np
+import collections
+
+
+def crawl():
 #   lookup_list is a dictionary of tuples where the key is the street address, and the tuple is (address, city, zip)
 
     from time import sleep
@@ -11,6 +17,37 @@ def crawl(lookup_list):
     driver.get("https://gis.cpa.texas.gov/search")
 
     all_data = {}
+
+    df = pd.read_excel('Test Data Texas.xlsx',sheet_name=1)
+
+    def clean_df(df):
+        l = df['Shipping Address'].to_numpy()
+        j = []
+
+        for i,k in enumerate(l):
+            if type(k) is str:
+                l[i] = l[i].replace('_x000D_\n',',')
+                l[i] = l[i].replace('\n',',')
+                try:
+                    j.append(usaddress.tag(l[i])[0])
+                except:
+                    j.append(collections.OrderedDict([('Recipient','bad')]))
+
+        new_df = pd.DataFrame(j)
+        df['Street Address'] = new_df['AddressNumber'] + ' ' + new_df['StreetName'] + ' ' + new_df['StreetNamePostType']
+        df['city'] = new_df['PlaceName']
+        lookup_list = {}
+        debug = df[['Street Address', 'city', 'Shipping Zip']].drop_duplicates()
+        debug = debug.dropna()
+
+        for item in debug.to_numpy():
+            key = item[0]  # Extracting the first part of the address as the key
+            lookup_list[key] = tuple(item)
+
+        return df, lookup_list
+    
+    df, lookup_list = clean_df(df)
+    # lookup_list = {'7005 Rain Creek Pkwy': ('7005 Rain Creek Pkwy', 'Austin', '78759'), '6905 Nottoway Lane': ('6905 Nottoway Lane', 'Lumberton', '77657')}
 
     for key in lookup_list.keys():
 
@@ -27,22 +64,16 @@ def crawl(lookup_list):
 
         input_search = driver.find_element(By.XPATH, '//*[@id="root"]/main/div/div[2]/div[2]/div[1]/div/div/div/form/div[7]/button[2]').click()
     
-
-        # save_copy = driver.find_element(By.XPATH, '//*[@id="content"]/div[1]/div/div[1]/div/span/button').click()
-
         time.sleep(5)
 
         tax_data = {}
 
+
         alert_element = driver.find_element(By.CSS_SELECTOR, '[role="alert"]')
+        while 'Processing' in driver.find_element(By.CSS_SELECTOR, '[role="alert"]').text:
+            time.sleep(2)
         if not alert_element.find_elements(By.XPATH, './/*'):
             print("No alert message found. Continuing...")
-
-
-
-            # elements = driver.find_elements_by_xpath('//div[@class="table-container"]')
-            # print(elements)
-            # sub_elements = driver.find_elements_by_xpath('//div[@class="mt-5"]/div')
 
             # Find all tables containing tax information
             table_elements = driver.find_elements_by_xpath('//div[@class="table-container"]/table')
@@ -60,21 +91,11 @@ def crawl(lookup_list):
                     tax_data[f'{tax_type} CODE'] = tax_info['Code']
                     tax_data[f'{tax_type} RATE'] = tax_info['Tax Rate']
 
-                # tax_type = tax_info.get('Type', '')
-                # if tax_type == 'STATE':
-                #     tax_data['STATE CODE'] = tax_info['Code']
-                #     tax_data['STATE RATE'] = tax_info['Tax Rate']
-                # elif tax_type == 'CITY':
-                #     tax_data['CITY CODE'] = tax_info['Code']
-                #     tax_data['CITY RATE'] = tax_info['Tax Rate']
-                # elif tax_type == 'TRANSIT':
-                #     tax_data['TRANSIT CODE'] = tax_info['Code']
-                #     tax_data['TRANSIT RATE'] = tax_info['Tax Rate']
-
             print(tax_data) 
 
         else:
             print("Alert message:", alert_element.text)
+            tax_data['Fail'] = 'X'
             # Handle the alert message as needed
 
         all_data[key] = tax_data
@@ -82,13 +103,16 @@ def crawl(lookup_list):
         input_add.clear()
         input_city.clear()
         input_zip.clear()
-    
-    print(pd.DataFrame(data=all_data).T)
 
     driver.quit()
+    new_df = pd.DataFrame(data=all_data).T
+    merged_df = df.merge(new_df, how='left', left_on='Street Address', right_index=True)
+    merged_df = merged_df.replace('NaN', '', regex=True)
+    merged_df = merged_df.replace(np.nan, '', regex=True)
+
+    merged_df.to_excel('debug.xlsx')
 
 
 if __name__ == '__main__'   :
     print('crawler loaded')
-    lookup_list = {'7005 Rain Creek':('7005 Rain Creek', 'Austin','78759'), 'debug':('bad','da','12345'), '6905 Nottoway Lane':('6905 Nottoway Lane', 'Lumberton', '77657')}
-    crawl(lookup_list)
+    crawl()
