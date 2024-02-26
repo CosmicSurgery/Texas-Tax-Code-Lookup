@@ -2,10 +2,10 @@ import requests
 import numpy as np
 
 parameters = {
-"street":"4001+N+Lamar+Blvd",
-"city":"Austin",
+"street":"706 CIMARRON HILLS TRL W",
+"city":"GEORGETOWN",
 "state":"TX",
-"postalcode":"78756",
+"postalcode":"78628",
 "api_key":"65cf629eae4e0275450588arde0e50b"
 }
 
@@ -19,9 +19,10 @@ print(response.status_code)
 num_response = len(response.json())
 coords = []
 for k in response.json():
+    coords.append((k['lat'], k['lon']))
     coords.append((np.round(float(k['lat']),6), np.round(float(k['lon']),6)))
 
 
 print(coords)
-
+# print(response.json())
 
