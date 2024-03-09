@@ -6,9 +6,7 @@ def main():
     import collections
     from time import sleep
     import pandas as pd
-    from selenium import webdriver
-    from selenium.webdriver.common.by import By
-    import time
+    from utils import crawler
 
     all_data = {}
     df = pd.read_excel('Test Data Texas.xlsx',sheet_name=1)
@@ -17,7 +15,7 @@ def main():
 
     f = open("log1.txt", "a")
 
-    for i,_ in enumerate(raw_addresses):
+    for i,k in enumerate(raw_addresses):
         if type(k) is str:
             raw_addresses[i] = raw_addresses[i].replace('_x000D_\n',',')
             raw_addresses[i] = raw_addresses[i].replace('\n',',')
@@ -44,6 +42,12 @@ def main():
     # fields...
 
     # df.to_excel('Pre-Processed.xlsx')
+        
+    
+    new_df = crawler(lookup_list)
+    merged_df = df.merge(new_df, how='left', left_on='Street Address', right_index=True)
+    merged_df = merged_df.replace('NaN', '', regex=True)
+    merged_df = merged_df.replace(np.nan, '', regex=True)
 
 
 if __name__ == '__main__':
