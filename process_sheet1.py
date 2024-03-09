@@ -8,7 +8,6 @@ def main():
     import pandas as pd
     from utils import crawler
 
-    all_data = {}
     df = pd.read_excel('Test Data Texas.xlsx',sheet_name=1)
     raw_addresses = df['Shipping Address'].to_numpy()   
     processed_adds = []
@@ -36,19 +35,11 @@ def main():
     for item in unique_adds.to_numpy():
         key = item[0]  # Extracting the first part of the address as the key
         lookup_list[key] = tuple(item)
-
-    # Here I should import a function from utils? which will be sort of a generic script
-    # that uses a dictionary of fields to crawl the .gov website and return the relevant
-    # fields...
-
-    # df.to_excel('Pre-Processed.xlsx')
-        
-    
+      
     new_df = crawler(lookup_list)
     merged_df = df.merge(new_df, how='left', left_on='Street Address', right_index=True)
     merged_df = merged_df.replace('NaN', '', regex=True)
     merged_df = merged_df.replace(np.nan, '', regex=True)
-
 
 if __name__ == '__main__':
     main()

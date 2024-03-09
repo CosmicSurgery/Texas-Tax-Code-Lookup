@@ -26,7 +26,7 @@ def crawler(lookup_list):
         input_zip = driver.find_element(By.XPATH, '//*[@id="ZipCode"]')
         input_zip.send_keys(lookup_list[key][2])
 
-        input_search = driver.find_element(By.XPATH, '//*[@id="root"]/main/div/div[2]/div[2]/div[1]/div/div/div/form/div[7]/button[2]').click()
+        driver.find_element(By.XPATH, '//*[@id="root"]/main/div/div[2]/div[2]/div[1]/div/div/div/form/div[7]/button[2]').click()
     
         time.sleep(5)
 
