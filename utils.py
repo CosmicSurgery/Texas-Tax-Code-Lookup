@@ -13,6 +13,9 @@ def crawler(lookup_list):
     all_data = {}
 
 
+    good = []
+    bad = []
+
     for key in lookup_list.keys():
 
         time.sleep(1)
@@ -53,11 +56,14 @@ def crawler(lookup_list):
                     # Add tax information to the dictionary
                     tax_data[f'{tax_type} CODE'] = tax_info['Code']
                     tax_data[f'{tax_type} RATE'] = tax_info['Tax Rate']
+            
+            good.append(key)
                     
         else:
             print("Alert message:", alert_element.text)
             tax_data['Fail'] = 'X'
             # Handle the alert message as needed
+            bad.append(key)
 
         all_data[key] = tax_data
 
@@ -66,5 +72,5 @@ def crawler(lookup_list):
         input_zip.clear()
 
     driver.quit()
-    return pd.DataFrame(data=all_data).T
+    return pd.DataFrame(data=all_data).T, good, bad
 

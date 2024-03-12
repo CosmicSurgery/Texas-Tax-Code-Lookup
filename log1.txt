@@ -1,0 +1,49 @@
+2024-03-12
+FAIL - Untaggable 
+Noel Pittman Design_x000D_
+4915 West Lovers Lane_x000D_
+Dallas, TX 75209_x000D_
+United States of America_x000D_
+P:469.506.8693
+~~~
+
+{'7005 Rain Creek Pkwy': ('7005 Rain Creek Pkwy', 'Austin', '78759'), 
+'6905 Nottoway Lane': ('6905 Nottoway Lane', 'Lumberton', '77657'), 
+'1926 Belmont Boulevard': ('1926 Belmont Boulevard', 'Abilene', '79602'), 
+'6925 Snider Plaza': ('6925 Snider Plaza', 'Dallas', '75205'), 
+'2050 Stemmons Frwy': ('2050 Stemmons Frwy', 'Dallas', '75207'), 
+'4101 CHURCHILL DOWNS DR': ('4101 CHURCHILL DOWNS DR', 'AUSTIN', '78746'), 
+'4209 Warnock Ct': ('4209 Warnock Ct', 'FORT WORTH', '76109'), 
+'6200 CEDAR CREEK DR': ('6200 CEDAR CREEK DR', 'HOUSTON', '77057'), 
+'3108 JARRARD STREET': ('3108 JARRARD STREET', 'HOUSTON', '77005'), 
+'4803 SANDESTIN DR': ('4803 SANDESTIN DR', 'DALLAS', '75287'), 
+'179 Main Street': ('179 Main Street', 'Boerne', '78006'), 
+'3663 Bess Caves Road': ('3663 Bess Caves Road', 'West Lake Hills', '78746'), 
+'3119 Noble lakes Ln': ('3119 Noble lakes Ln', 'Houston Texas', '77082'), 
+'2700 SIMONDALE DR': ('2700 SIMONDALE DR', 'FORT WORTH', '76109'), 
+'10406 Eiche Circle': ('10406 Eiche Circle', 'New Braunfels', '78132'), 
+'4600 PENBROOK COURT': ('4600 PENBROOK COURT', 'PLANO', '75024'), 
+'7 Royal Fern Dr': ('7 Royal Fern Dr', 'Spring', '77380'),
+ '2100 Hulen Street': ('2100 Hulen Street', 'Fort Worth', '76107'), 
+ '1711 Congress Ave.': ('1711 Congress Ave.', 'Austin', '78704'), 
+ '1111 BERING DR': ('1111 BERING DR', 'HOUSTON', '77057'), 
+ '265 Main Street': ('265 Main Street', 'Boerne', '78006'), 
+ '607 Canyon Rim Dr': ('607 Canyon Rim Dr', 'Dripping Springs Texas', '78620'), 
+ '4952 Westbriar Drive': ('4952 Westbriar Drive', 'Fort Worth', '76109'), 
+ '2132 Loch Haven Drive': ('2132 Loch Haven Drive', 'Plano', '75023'), 
+ '327 COLLEGE ST': ('327 COLLEGE ST', 'SULPHUR SPRINGS', '75482'), 
+ '1545 MISSION VALLEY RD': ('1545 MISSION VALLEY RD', 'NEW BRAUNFELS', '78132'), 
+ '1403 Elm Brook Dr': ('1403 Elm Brook Dr', 'Austin', '78758'), 
+ '109 Virginia Street': ('109 Virginia Street', 'Mc Kinney', '75069'), 
+ '619 Ramblewood Rd': ('619 Ramblewood Rd', 'Houston Texas', '77079'), '104 Mercer Street': ('104 Mercer Street', 'Dripping Springs', '78620'), '12800 Portifino Street': ('12800 Portifino Street', 'Fort Worth', '76126'), '50 Shasta Bend Circle Spring': ('50 Shasta Bend Circle Spring', 'Texas', '77389'), '5917 Genoa Court': ('5917 Genoa Court', 'Plano', '75093'), '779 River Chase Way': ('779 River Chase Way', 'New Braunfels', '78132'), '10 Creekwood Circle': ('10 Creekwood Circle', 'Richardson', '75080'), '250 Twin Canyon Drive': ('250 Twin Canyon Drive', 'Boerne', '78006'), '112 Williamsburg Lane': ('112 Williamsburg Lane', 'Fort Worth', '76107'), '506 RIPPLE CREEK DR': ('506 RIPPLE CREEK DR', 'HOUSTON', '77024'), '6901 Preston Road': ('6901 Preston Road', 'Dallas', '75205'), '1601 Austin Avenue': ('1601 Austin Avenue', 'Waco', '76701'), '5000 El Dorado Parkway': ('5000 El Dorado Parkway', 'Frisco', '75033'), '6408 Fershaw Place': ('6408 Fershaw Place', 'Ft. Worth', '76116'), '2819 Henderson Ave': ('2819 Henderson Ave', 'Dallas', '75206'), '1821 John McCain Rd': ('1821 John McCain Rd', 'Colleyville', '76034'), '7512 John Autry Rd.': ('7512 John Autry Rd.', 'North Richland Hills', '76182'), '123 Broadway Ave.': ('123 Broadway Ave.', 'Winnie', '77665'), '1716 Hollyhock Drive': ('1716 Hollyhock Drive', 'Celina', '75009'), '225 Cosmos Lane': ('225 Cosmos Lane', 'Driftwood', '78619'), '4855 Old Bullard Road': ('4855 Old Bullard Road', 'Tyler', '75703'), '12680 Hillcrest Road': ('12680 Hillcrest Road', 'Dallas', '75230'), '1817 Keats Drive': ('1817 Keats Drive', 'Plano', '75093'), '5705 Main St.': ('5705 Main St.', 'Chapel Hill', '77426'), '1020 Nasa Pkwy': ('1020 Nasa Pkwy', 'Webster', '77598'), '102 Mockingbird Lane': ('102 Mockingbird Lane', 'Yoakum', '77995'), '2319 Highland Heights Lane': ('2319 Highland Heights Lane', 'Carrollton', '75007'), '4601 McCullough Ave': ('4601 McCullough Ave', 'San Antonio', '78212'), '8826 Stable Crest Blvd': ('8826 Stable Crest Blvd', 'Houston', '77024'), '4911 Camp Bowie Blvd': ('4911 Camp Bowie Blvd', 'Fort Worth', '76107'), '2106 Date Street': ('2106 Date Street', 'Plainview', '79072'), '2208 Post Office Street': ('2208 Post Office Street', 'Galveston', '77550'), '4300 10th St.': ('4300 10th St.', 'McAllen', '78504'), '5100 Hillcrest Drive': ('5100 Hillcrest Drive', 'Waco', '76710'), '3901 turtle creek blvd': ('3901 turtle creek blvd', 'Dallas', '75219'), '4444 Victory Drive': ('4444 Victory Drive', 'HOUSTON Texas', '77088'), '13125 Meridian Park Boulevard': ('13125 Meridian Park Boulevard', 'AUSTIN', '78739'), '540 Bibb Ave': ('540 Bibb Ave', 'Eagle Pass', '78852'), '550 10th Street': ('550 10th Street', 'Beaumont', '77702'), '2063 Point Loma Drive': ('2063 Point Loma Drive', 'Eagle Pass', '78852'), '111 Union Avenue': ('111 Union Avenue', 'New Braunfels', '78130'), '2408 Creektrail Ln': ('2408 Creektrail Ln', 'Richmond', '77406'), '215 Center St': ('215 Center St', 'San Antonio', '78202'), '6304 Carroll Gardens': ('6304 Carroll Gardens', 'Amarillo', '79119'), '232 38th Street': ('232 38th Street', 'Houston', '77018'), '540 Whitley Place Drive': ('540 Whitley Place Drive', 'Prosper', '75078'), '3525 Franklin Avenue': ('3525 Franklin Avenue', 'Waco', '76704'), '4260 Oak Lawn Avenue': ('4260 Oak Lawn Avenue', 'Dallas', '75219'), '850 Greenside Drive': ('850 Greenside Drive', 'Richardson', '75080'), '302 Canyonwood Drive': ('302 Canyonwood Drive', 'Dripping Springs Texas', '78620'), '8238 Nunley Lane': ('8238 Nunley Lane', 'Dallas', '75231'), '1940 Ruby Road': ('1940 Ruby Road', 'Irving', '75060'), '706 CIMARRON HILLS TRL': ('706 CIMARRON HILLS TRL', 'WRST, GEORGETOWN', '78628'), '10331 CREEKWOOD ST': ('10331 CREEKWOOD ST', 'LUMBERTON', '77657'), '645 Northlake Drive': ('645 Northlake Drive', 'Dallas', '75218'), '5558 Edlen Drive': ('5558 Edlen Drive', 'Dallas', '75220'), '4208 Windsor Pkwy': ('4208 Windsor Pkwy', 'Dallas', '75205'), '309 MOSS HILL ROAD': ('309 MOSS HILL ROAD', 'IRVING', '75063'), '12651-D Memorial Drive': ('12651-D Memorial Drive', 'Houston', '77024'), '3517 Gillon Avenue': ('3517 Gillon Avenue', 'Dallas', '75205'), '2400 GRANDVIEW DR': ('2400 GRANDVIEW DR', 'RICHARDSON', '75080'), '730 VANGUARD ST': ('730 VANGUARD ST', 'Lakeway', '78734'), '1215 Maiden Way Dr': ('1215 Maiden Way Dr', 'Spring', '77379'), '4041 Hidden Valley Dr.': ('4041 Hidden Valley Dr.', 'DENISON', '75020'), '30303 Oak Tree Drive': ('30303 Oak Tree Drive', 'Georgetown', '78628')}
+Pre-processing: taggable addresses - 93, untaggable addresses - 7
+ ['FAIL - Untaggable \nNoel Pittman Design_x000D_\n4915 West Lovers Lane_x000D_\nDallas, TX 75209_x000D_\nUnited States of America_x000D_\nP:469.506.8693\n~~~\n', 
+ 'FAIL - Untaggable \nNoel Pittman Design_x000D_\n4915 West Lovers Lane_x000D_\nDallas, TX 75209_x000D_\nUnited States of America_x000D_\nP:469.506.8693\n~~~\n', 
+ 'FAIL - Untaggable \nNoel Pittman Design_x000D_\n4915 West Lovers Lane_x000D_\nDallas, TX 75209_x000D_\nUnited States of America_x000D_\nP:469.506.8693\n~~~\n', 
+ 'FAIL - Untaggable \nNoel Pittman Design_x000D_\n4915 West Lovers Lane_x000D_\nDallas, TX 75209_x000D_\nUnited States of America_x000D_\nP:469.506.8693\n~~~\n', 
+ 'FAIL - Untaggable \nNoel Pittman Design_x000D_\n4915 West Lovers Lane_x000D_\nDallas, TX 75209_x000D_\nUnited States of America_x000D_\nP:469.506.8693\n~~~\n', 
+ 'FAIL - Untaggable \nNoel Pittman Design_x000D_\n4915 West Lovers Lane_x000D_\nDallas, TX 75209_x000D_\nUnited States of America_x000D_\nP:469.506.8693\n~~~\n', 
+ 'FAIL - Untaggable \nNoel Pittman Design_x000D_\n4915 West Lovers Lane_x000D_\nDallas, TX 75209_x000D_\nUnited States of America_x000D_\nP:469.506.8693\n~~~\n']
+Processing: processed - 88, unprocessed - 5
+ ['1545 MISSION VALLEY RD', '5000 El Dorado Parkway', '5705 Main St.', '3525 Franklin Avenue', '706 CIMARRON HILLS TRL']
+93 total time: 631.9504389762878
